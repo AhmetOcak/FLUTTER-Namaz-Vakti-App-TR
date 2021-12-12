@@ -13,9 +13,9 @@ get_data class'ında belirtilen yere api keyinizi girmeniz gerekmektedir.
 Uygulamadan Görseller;
 
 <p float="left" width="100%">
-          <img src="https://user-images.githubusercontent.com/73544434/145719207-5a93ebcb-66ba-437c-ae54-e2fa73b783db.png"  width="240" height="480" />
-          <img src="https://user-images.githubusercontent.com/73544434/145719209-51767065-4053-4501-9f8e-f9deb250a60a.png"  width="240" height="480" />
+          <img src="https://user-images.githubusercontent.com/73544434/145724564-99992bfa-70a3-4550-bc8f-3666f0295eff.png"  width="240" height="480" />
+          <img src="https://media.giphy.com/media/xCROXUdKlF1ziMJuNo/giphy.gif" />
 </p>
 
-![](https://media.giphy.com/media/8FGGqsnHzhWHCvmXMX/giphy.gif)
+
  
