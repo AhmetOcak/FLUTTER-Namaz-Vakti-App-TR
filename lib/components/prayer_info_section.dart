@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:prayerapp/constants/constant.dart';
 
-class PrayerInfoSection extends StatelessWidget {
+class PrayerInfoSection extends StatefulWidget {
   PrayerInfoSection({
     required this.prayerTimeName,
     required this.prayerTime,
+    required this.isTheCurrent,
   });
 
   String prayerTimeName = '';
   String prayerTime = '';
+  bool isTheCurrent = false;
 
+  @override
+  State<PrayerInfoSection> createState() => _PrayerInfoSectionState();
+}
+
+class _PrayerInfoSectionState extends State<PrayerInfoSection> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -18,19 +25,20 @@ class PrayerInfoSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '$prayerTimeName : ',
-            style: const TextStyle(
+            '${widget.prayerTimeName} : ',
+            style: TextStyle(
               fontSize: 26,
               color: accentColor,
-              fontWeight: FontWeight.w300,
+              fontWeight: widget.isTheCurrent == true ? FontWeight.w900 : FontWeight.w300,
+              
             ),
           ),
           Text(
-            prayerTime,
-            style: const TextStyle(
+            widget.prayerTime,
+            style: TextStyle(
               fontSize: 26,
               color: accentColor,
-              fontWeight: FontWeight.w300,
+              fontWeight: widget.isTheCurrent == true ? FontWeight.w900 : FontWeight.w300
             ),
           ),
         ],

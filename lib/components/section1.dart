@@ -1,16 +1,38 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:prayerapp/components/timer.dart';
 import 'package:prayerapp/constants/constant.dart';
 
 class Section1 extends StatefulWidget {
-  const Section1({
-    Key? key,
-  }) : super(key: key);
+  Section1({
+    required this.nextPrayerTime,
+  });
+
+  final String nextPrayerTime;
 
   @override
   State<Section1> createState() => _Section1State();
 }
 
 class _Section1State extends State<Section1> {
+  Timer? timer;
+  String time = '';
+
+  @override
+  void initState() {
+    super.initState();
+    timer = Timer.periodic(
+      const Duration(seconds: 1),
+      (timer) => {
+        setState(
+          () {
+            time = Time().uptadeTime(widget.nextPrayerTime);
+          },
+        ),
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -29,9 +51,9 @@ class _Section1State extends State<Section1> {
               fontWeight: FontWeight.w300,
             ),
           ),
-          const Text(
-            '1 saat 10 dakika 20 saniye',
-            style: TextStyle(
+          Text(
+            time,
+            style: const TextStyle(
               color: accentColor,
               fontSize: 35,
               fontWeight: FontWeight.w300,

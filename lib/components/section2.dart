@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:prayerapp/components/my_divider.dart';
 import 'package:prayerapp/components/prayer_info_section.dart';
 import 'package:prayerapp/constants/constant.dart';
+import 'package:prayerapp/views/home_screen.dart';
 
-class Section2 extends StatelessWidget {
+class Section2 extends StatefulWidget {
   String imsak;
   String imsakVakti;
   String gunes;
@@ -15,8 +16,9 @@ class Section2 extends StatelessWidget {
   String aksam;
   String aksamVakti;
   String yatsi;
-  String yatsikVakti;
+  String yatsiVakti;
   String cityName;
+  String currentPrayerTime;
 
   Section2({
     this.imsak = 'xx',
@@ -30,17 +32,23 @@ class Section2 extends StatelessWidget {
     this.aksam = 'xx',
     this.aksamVakti = 'xx',
     this.yatsi = 'xx',
-    this.yatsikVakti = 'xx',
+    this.yatsiVakti = 'xx',
     this.cityName = 'xx',
+    required this.currentPrayerTime,
   });
 
+  @override
+  State<Section2> createState() => _Section2State();
+}
+
+class _Section2State extends State<Section2> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Center(
           child: Text(
-            cityName,
+            widget.cityName,
             style: const TextStyle(
               fontSize: 40,
               color: accentColor,
@@ -52,33 +60,39 @@ class Section2 extends StatelessWidget {
           height: MediaQuery.of(context).size.height / 20,
         ),
         PrayerInfoSection(
-          prayerTime: imsakVakti,
-          prayerTimeName: imsak,
+          prayerTime: widget.imsakVakti,
+          prayerTimeName: widget.imsak,
+          isTheCurrent: widget.currentPrayerTime == widget.imsak,
         ),
         const MyDivider(),
         PrayerInfoSection(
-          prayerTime: gunesVakti,
-          prayerTimeName: gunes,
+          prayerTime: widget.gunesVakti,
+          prayerTimeName: widget.gunes,
+          isTheCurrent: widget.currentPrayerTime == widget.gunes,
         ),
         const MyDivider(),
         PrayerInfoSection(
-          prayerTime: ogleVakti,
-          prayerTimeName: ogle,
+          prayerTime: widget.ogleVakti,
+          prayerTimeName: widget.ogle,
+          isTheCurrent: widget.currentPrayerTime == widget.ogle,
         ),
         const MyDivider(),
         PrayerInfoSection(
-          prayerTime: ikindiVakti,
-          prayerTimeName: ikindi,
+          prayerTime: widget.ikindiVakti,
+          prayerTimeName: widget.ikindi,
+          isTheCurrent: widget.currentPrayerTime == widget.ikindi,
         ),
         const MyDivider(),
         PrayerInfoSection(
-          prayerTime: aksamVakti,
-          prayerTimeName: aksam,
+          prayerTime: widget.aksamVakti,
+          prayerTimeName: widget.aksam,
+          isTheCurrent: widget.currentPrayerTime == widget.aksam,
         ),
         const MyDivider(),
         PrayerInfoSection(
-          prayerTime: yatsikVakti,
-          prayerTimeName: yatsi,
+          prayerTime: widget.yatsiVakti,
+          prayerTimeName: widget.yatsi,
+          isTheCurrent: widget.currentPrayerTime == widget.yatsi,
         ),
       ],
     );
