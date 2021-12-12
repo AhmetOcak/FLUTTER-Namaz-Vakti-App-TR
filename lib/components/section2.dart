@@ -50,9 +50,9 @@ class _Section2State extends State<Section2> {
           child: Text(
             widget.cityName,
             style: const TextStyle(
-              fontSize: 40,
+              fontSize: 45,
               color: accentColor,
-              fontWeight: FontWeight.w300,
+              fontWeight: FontWeight.w400,
             ),
           ),
         ),

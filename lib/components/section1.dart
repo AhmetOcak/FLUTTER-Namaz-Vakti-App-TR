@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:prayerapp/components/timer.dart';
 import 'package:prayerapp/constants/constant.dart';
 
@@ -38,16 +39,22 @@ class _Section1State extends State<Section1> {
     return Center(
       child: Column(
         children: [
+          const SizedBox(
+            height: 40,
+          ),
           Icon(
-            Icons.access_time_rounded,
-            size: MediaQuery.of(context).size.width / 2,
+            FontAwesomeIcons.kaaba,
+            size: MediaQuery.of(context).size.width / 3,
             color: accentColor,
+          ),
+          const SizedBox(
+            height: 30,
           ),
           const Text(
             'Sıradaki namaz vaktine',
             style: TextStyle(
               color: accentColor,
-              fontSize: 35,
+              fontSize: 30,
               fontWeight: FontWeight.w300,
             ),
           ),
@@ -55,7 +62,7 @@ class _Section1State extends State<Section1> {
             time,
             style: const TextStyle(
               color: accentColor,
-              fontSize: 35,
+              fontSize: 30,
               fontWeight: FontWeight.w300,
             ),
           ),
