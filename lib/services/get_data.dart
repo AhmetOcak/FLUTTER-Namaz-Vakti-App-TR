@@ -15,7 +15,7 @@ class DataService {
         "content-type": "application/json",
       },
     );
-    
+
     final json = jsonDecode(response.body);
     return PrayerTimeModel.fromJson(json);
   }

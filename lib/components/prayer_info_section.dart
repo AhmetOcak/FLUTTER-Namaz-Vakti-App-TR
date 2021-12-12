@@ -29,8 +29,9 @@ class _PrayerInfoSectionState extends State<PrayerInfoSection> {
             style: TextStyle(
               fontSize: 26,
               color: accentColor,
-              fontWeight: widget.isTheCurrent == true ? FontWeight.w900 : FontWeight.w300,
-              
+              fontWeight: widget.isTheCurrent == true
+                  ? FontWeight.w900
+                  : FontWeight.w300,
             ),
           ),
           Text(
@@ -38,7 +39,9 @@ class _PrayerInfoSectionState extends State<PrayerInfoSection> {
             style: TextStyle(
               fontSize: 26,
               color: accentColor,
-              fontWeight: widget.isTheCurrent == true ? FontWeight.w900 : FontWeight.w300
+              fontWeight: widget.isTheCurrent == true
+                  ? FontWeight.w900
+                  : FontWeight.w300,
             ),
           ),
         ],

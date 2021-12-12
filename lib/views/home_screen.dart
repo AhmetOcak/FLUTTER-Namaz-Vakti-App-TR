@@ -25,19 +25,29 @@ class _HomeScreenState extends State<HomeScreen> {
     int currentMinute = DateTime.now().minute;
 
     if (int.parse(widget.prayerTimeModel.imsakVakti!.substring(0, 2)) >=
-        currentHour && currentMinute < int.parse(widget.prayerTimeModel.imsakVakti!.substring(3, 5))) {
+            currentHour &&
+        currentMinute <
+            int.parse(widget.prayerTimeModel.imsakVakti!.substring(3, 5))) {
       return widget.prayerTimeModel.imsakVakti!;
     } else if (int.parse(widget.prayerTimeModel.gunesVakti!.substring(0, 2)) >=
-        currentHour && currentMinute < int.parse(widget.prayerTimeModel.gunesVakti!.substring(3, 5))) {
+            currentHour &&
+        currentMinute <
+            int.parse(widget.prayerTimeModel.gunesVakti!.substring(3, 5))) {
       return widget.prayerTimeModel.gunesVakti!;
     } else if (int.parse(widget.prayerTimeModel.ogleVakti!.substring(0, 2)) >=
-        currentHour && currentMinute < int.parse(widget.prayerTimeModel.ogleVakti!.substring(3, 5))) {
+            currentHour &&
+        currentMinute <
+            int.parse(widget.prayerTimeModel.ogleVakti!.substring(3, 5))) {
       return widget.prayerTimeModel.ogleVakti!;
     } else if (int.parse(widget.prayerTimeModel.ikindiVakti!.substring(0, 2)) >=
-        currentHour && currentMinute < int.parse(widget.prayerTimeModel.ikindiVakti!.substring(3, 5))) {
+            currentHour &&
+        currentMinute <
+            int.parse(widget.prayerTimeModel.ikindiVakti!.substring(3, 5))) {
       return widget.prayerTimeModel.ikindiVakti!;
     } else if (int.parse(widget.prayerTimeModel.aksamVakti!.substring(0, 2)) >=
-        currentHour && currentMinute < int.parse(widget.prayerTimeModel.aksamVakti!.substring(3, 5))) {
+            currentHour &&
+        currentMinute <
+            int.parse(widget.prayerTimeModel.aksamVakti!.substring(3, 5))) {
       return widget.prayerTimeModel.aksamVakti!;
     } else {
       return widget.prayerTimeModel.yatsiVakti!;
@@ -49,19 +59,29 @@ class _HomeScreenState extends State<HomeScreen> {
     int currentMinute = DateTime.now().minute;
 
     if (int.parse(widget.prayerTimeModel.imsakVakti!.substring(0, 2)) >=
-        currentHour && currentMinute < int.parse(widget.prayerTimeModel.imsakVakti!.substring(3, 5))) {
+            currentHour &&
+        currentMinute <
+            int.parse(widget.prayerTimeModel.imsakVakti!.substring(3, 5))) {
       return currentPrayerTime = widget.prayerTimeModel.yatsi!;
     } else if (int.parse(widget.prayerTimeModel.gunesVakti!.substring(0, 2)) >=
-        currentHour && currentMinute < int.parse(widget.prayerTimeModel.gunesVakti!.substring(3, 5))) {
+            currentHour &&
+        currentMinute <
+            int.parse(widget.prayerTimeModel.gunesVakti!.substring(3, 5))) {
       return currentPrayerTime = widget.prayerTimeModel.imsak!;
     } else if (int.parse(widget.prayerTimeModel.ogleVakti!.substring(0, 2)) >=
-        currentHour && currentMinute < int.parse(widget.prayerTimeModel.ogleVakti!.substring(3, 5))) {
+            currentHour &&
+        currentMinute <
+            int.parse(widget.prayerTimeModel.ogleVakti!.substring(3, 5))) {
       return currentPrayerTime = widget.prayerTimeModel.gunes!;
     } else if (int.parse(widget.prayerTimeModel.ikindiVakti!.substring(0, 2)) >=
-        currentHour && currentMinute < int.parse(widget.prayerTimeModel.ikindiVakti!.substring(3, 5))) {
+            currentHour &&
+        currentMinute <
+            int.parse(widget.prayerTimeModel.ikindiVakti!.substring(3, 5))) {
       return currentPrayerTime = widget.prayerTimeModel.ogle!;
     } else if (int.parse(widget.prayerTimeModel.aksamVakti!.substring(0, 2)) >=
-        currentHour && currentMinute < int.parse(widget.prayerTimeModel.aksamVakti!.substring(3, 5))) {
+            currentHour &&
+        currentMinute <
+            int.parse(widget.prayerTimeModel.aksamVakti!.substring(3, 5))) {
       return currentPrayerTime = widget.prayerTimeModel.ikindi!;
     } else {
       return currentPrayerTime = widget.prayerTimeModel.aksam!;

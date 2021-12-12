@@ -13,7 +13,7 @@ class Time {
     targetSecond = 60;
 
     String result = '';
-    
+
     if (targetHour < currentHour) {
       if (targetMinute < currentMinute) {
         if (((targetHour + 24) - currentHour).abs() < 10) {
@@ -56,7 +56,6 @@ class Time {
       if (((targetMinute + 60) - currentMinute).abs() < 10) {
         String q = "0" + ((targetMinute + 60) - currentMinute).abs().toString();
         result += q + " dakika ";
-        
       } else {
         String q = ((targetMinute + 60) - currentMinute).abs().toString();
         result += q + " dakika ";
@@ -90,5 +89,4 @@ class Time {
 
     return result;
   }
-  
 }
