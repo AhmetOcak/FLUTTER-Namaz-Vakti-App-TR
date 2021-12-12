@@ -11,7 +11,7 @@ class DataService {
     var response = await http.post(
       url,
       headers: {
-        "authorization": "apikey 2ehyKijlw4TOgwHb5zGL11:7wyAgBY84SwkjUDPGVaZmG",
+        "authorization": "your api key", // enter your api key here
         "content-type": "application/json",
       },
     );
