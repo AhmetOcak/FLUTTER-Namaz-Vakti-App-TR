@@ -16,39 +16,19 @@ class Time {
 
     if (targetHour < currentHour) {
       if (targetMinute < currentMinute) {
-        if (((targetHour + 24) - currentHour).abs() < 10) {
-          String q = '0' + (targetHour - currentHour - 1).abs().toString();
-          result = q + " saat ";
-        } else {
-          String q = ((targetHour + 24) - currentHour - 1).abs().toString();
-          result = q + " saat ";
-        }
+        String q = ((targetHour + 24) - currentHour - 1).abs().toString();
+        result = q + " saat ";
       } else {
-        if (((targetHour + 24) - currentHour).abs() < 10) {
-          String q = '0' + (targetHour - currentHour).abs().toString();
-          result = q + " saat ";
-        } else {
-          String q = ((targetHour + 24) - currentHour).abs().toString();
-          result = q + " saat ";
-        }
+        String q = ((targetHour + 24) - currentHour).abs().toString();
+        result = q + " saat ";
       }
     } else {
       if (targetMinute < currentMinute) {
-        if ((targetHour - currentHour).abs() < 10) {
-          String q = '0' + (targetHour - currentHour - 1).abs().toString();
-          result = q + " saat ";
-        } else {
-          String q = (targetHour - currentHour - 1).abs().toString();
-          result = q + " saat ";
-        }
+        String q = (targetHour - currentHour - 1).abs().toString();
+        result = q + " saat ";
       } else {
-        if ((targetHour - currentHour).abs() < 10) {
-          String q = '0' + (targetHour - currentHour).abs().toString();
-          result = q + " saat ";
-        } else {
-          String q = (targetHour - currentHour).abs().toString();
-          result = q + " saat ";
-        }
+        String q = (targetHour - currentHour).abs().toString();
+        result = q + " saat ";
       }
     }
 
@@ -86,7 +66,6 @@ class Time {
           .toString();
       result += q + " saniye ";
     }
-
     return result;
   }
 }
