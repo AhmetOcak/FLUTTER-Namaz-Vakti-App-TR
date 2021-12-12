@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:prayerapp/model/model.dart';
 
-class GetData {
-  Future<PrayerTimeModel> getData() async {
+class DataService {
+  Future<PrayerTimeModel> getData(String cityName) async {
     Uri url =
-        Uri.parse("https://api.collectapi.com/pray/all?data.city=istanbul");
+        Uri.parse("https://api.collectapi.com/pray/all?data.city=$cityName");
 
     var response = await http.post(
       url,
