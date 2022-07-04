@@ -1,4 +1,4 @@
-# FLUTTER-Namaz-Vakti-App-TR
+# FLUTTER-Namaz-Vakti-App-TR 🕋
 
 Bulunduğunuz şehrin namaz vakti bilgilerini size sunan bir uygulamadır. Yalnzca Türkiye'deki şehirler için çalışır.
 
